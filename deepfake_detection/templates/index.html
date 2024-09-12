@@ -2,6 +2,8 @@
 
 {% block tittle %}index{% endblock tittle %}
 
+{% load static %}
+
 {% block body %}
 
 <div class="container">
@@ -36,12 +38,17 @@
           <div class="row">
             <div class="col-md-4">
              <div class="media">
-                  <img src="https://api.unsplash.com/photos?page=1" alt="...">
+                   <img src="{% static 'img.jpeg' %}" alt="..." width="400" height="400" style="padding-right: 30px;">
              </div>
             </div>
          <div class="col-md-4">
              <div class="media">
-                  <img src="{{STATIC_URL}}img.jpeg" alt="...">
+                  <img src="{% static 'im_02.jpg' %}" alt="..." width="400" height="400" style="padding-right: 30px;">
+             </div>
+          </div>
+           <div class="col-md-4">
+             <div class="media">
+                  <img src="{% static 'im_03.jpg' %}" alt="..." width="400" height="400" style="padding-right: 30px;">
              </div>
           </div>
             {% comment %} <div class="col-md-4">
